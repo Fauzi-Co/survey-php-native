@@ -1,0 +1,857 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+body {
+  background: #0a1931;
+  overflow-x: hidden;
+}
+
+button {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+button.animate {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -77;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal .card {
+  padding: 1.2rem 0.7rem;
+  background: #eeeeee;
+  border-radius: 10px;
+  width: 918px;
+}
+
+.modal .card .box {
+  background: #fff;
+  border-radius: 10px;
+  padding-top: 4px;
+  padding-bottom: 30px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.modal .card .box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modal .card .box table td {
+  border: 1px solid #e5e5e5;
+  width: 50%;
+  padding: 10px 30px;
+}
+
+.modal .card .box table td textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.modal .card .box table td textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.modal .card .box table td .radio-group {
+  position: relative;
+}
+
+.modal .card .box table td .radio-group .dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #eaeaea;
+  border-radius: 50%;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal .card .box table td .radio-group .dot.active {
+  background: #0a1931;
+}
+
+.modal .card .box table td .radio-group input {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.modal .card .box p {
+  margin-bottom: 4px;
+}
+
+.modal .card .box p,
+.modal .card .box td {
+  text-align: center;
+}
+
+.modal .card .box td.left {
+  text-align: left;
+}
+
+.modal .card .box td.right {
+  text-align: right;
+}
+
+.modal .card .box button {
+  margin: 0 10px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding: 2px 1rem;
+  border: none;
+  font-size: 12px;
+}
+
+.modal .card .box button.simpan {
+  background: #05ff00;
+}
+
+.modal .card .box button.batal {
+  background: #ff0000;
+}
+
+.modal.delete .card .box {
+  padding-bottom: 4px;
+}
+
+.modal.delete .card .box table {
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal.delete .card .box table tr td {
+  border: none;
+}
+
+.modal.delete .card .box table tr td button {
+  margin-top: 0;
+}
+
+.modal.show {
+  opacity: 1;
+  z-index: 77;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+}
+
+.login h3 {
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  width: 708px;
+  margin: 0 auto;
+  width: 707px;
+  margin-bottom: 20px;
+}
+
+.login .logo {
+  width: 193px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.login .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.login p {
+  text-align: center;
+}
+
+.login a {
+  background: #52ff00;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  color: #000000;
+  padding: 12px 24px;
+  margin-bottom: 37px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.login a:hover {
+  background: #3bbb00;
+}
+
+.login p {
+  width: 540px;
+}
+
+.mulai {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-top: 107px;
+  gap: 1rem;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+
+.mulai .col-left {
+  width: 20%;
+}
+
+.mulai .col-left .logo {
+  width: 193px;
+  margin: 0 auto;
+}
+
+.mulai .col-left .logo img {
+  width: 100%;
+}
+
+.mulai .col-left .logo p {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.mulai .col-center {
+  width: 60%;
+}
+
+.mulai .col-center .card {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.mulai .col-center .card h4 {
+  color: #000;
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.mulai .col-center .card hr {
+  color: #000;
+  margin-bottom: 27px;
+}
+
+.mulai .col-center .card .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.mulai .col-center .card .row .col-1 {
+  width: 30%;
+  text-align: left;
+}
+
+.mulai .col-center .card .row .col-1 label {
+  color: #000;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.mulai .col-center .card .row .col-2 {
+  width: 67%;
+}
+
+.mulai .col-center .card .row .col-2 input,
+.mulai .col-center .card .row .col-2 select {
+  width: 100%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border: none;
+  color: #000;
+  text-align: left;
+  padding: 3px 10px;
+  font-size: 20px;
+}
+
+.mulai .col-center .card .row .col-2 input:focus {
+  outline: 2px solid #0a1931;
+  background: #fff;
+}
+
+.mulai .col-center .card .row p {
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 10px;
+}
+
+.mulai .col-center .card .row .col {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mulai .col-center .card .row .col .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  width: 50%;
+}
+
+.mulai .col-center .card .row .col .box .radio-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.mulai .col-center .card .row .col .box .radio-group .dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #eaeaea;
+  border-radius: 50%;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 14px;
+}
+
+.mulai .col-center .card .row .col .box .radio-group .dot.active {
+  background: #0a1931;
+}
+
+.mulai .col-center .card .row .col .box .radio-group input {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.mulai .col-center .card .row .col .box label {
+  display: inline-block;
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.mulai .col-center .card .row .col.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.mulai .col-center .card .row .col.submit button {
+  background: #52ff00;
+  border-radius: 10px;
+  color: #000;
+  padding: 5px 27px;
+  border: none;
+}
+
+.mulai .col-right {
+  width: 20%;
+  text-align: center;
+}
+
+.mulai .col-right a {
+  background: #ff0000;
+  border-radius: 10px;
+  padding: 4px 22px;
+  color: #000;
+}
+
+.kuis .col-center .card .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.kuis .col-center .card .row .no {
+  width: 7%;
+}
+
+.kuis .col-center .card .row .no .circle {
+  width: 25px;
+  height: 25px;
+  background: #0a1931;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.kuis .col-center .card .row .soal {
+  width: 93%;
+}
+
+.kuis .col-center .card .col.submit {
+  text-align: center;
+}
+
+.kuis .col-center .card .col.submit button {
+  background: #52ff00;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+  padding: 6px 35px;
+}
+
+.selesai .col-center .card {
+  color: #000;
+}
+
+.login.admin {
+  overflow-x: hidden;
+  padding-top: 5rem;
+}
+
+.login.admin .logo {
+  margin-bottom: 0.7rem;
+}
+
+.login.admin form {
+  width: 327px;
+  margin: 0 auto;
+}
+
+.login.admin form input {
+  width: 100%;
+  background: #c4c4c4;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  border: 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 15px;
+  padding: 10px 20px;
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-family: "Poppins";
+}
+
+.login.admin form input:focus {
+  outline: none;
+}
+
+.login.admin form .col {
+  width: 100%;
+  text-align: center;
+}
+
+.login.admin form .col button {
+  background: #52ff00;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  color: #000000;
+  padding: 7px 30px;
+  margin-bottom: 37px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .aside {
+  width: 25%;
+  padding-top: 60px;
+}
+
+.dashboard .aside .logo {
+  width: 170px;
+  margin: 0 auto;
+}
+
+.dashboard .aside .logo img {
+  width: 100%;
+}
+
+.dashboard .aside h5 {
+  font-size: 30px;
+  line-height: 45px;
+  padding-left: 40px;
+  color: #ffffff;
+  margin-bottom: 45px;
+}
+
+.dashboard .aside ul {
+  list-style: none;
+}
+
+.dashboard .aside ul li {
+  padding: 20px 40px;
+  border-top: 1px solid #fff;
+}
+
+.dashboard .aside ul li a {
+  color: #fff;
+  font-size: 17 px;
+  line-height: 38px;
+}
+
+.dashboard .aside ul li:last-child {
+  border-bottom: 1px solid #fff;
+}
+
+.dashboard main {
+  padding-top: 60px;
+  background: #e5e5e5e5;
+  width: 75%;
+  padding: 1rem;
+}
+
+.dashboard main h3 {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 52px;
+  margin-bottom: 23px;
+}
+
+.dashboard main .search {
+  width: 50%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 1rem;
+}
+
+.dashboard main .search select {
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.dashboard main .search .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.dashboard main .search .col button {
+  background: #5d8bf4;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #fff;
+  padding: 1px 5px;
+  border: none;
+}
+
+.dashboard main .card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 44px;
+}
+
+.dashboard main .card h5 {
+  margin-bottom: 7px;
+}
+
+.dashboard main .card button.add {
+  margin-bottom: 1rem;
+}
+
+.dashboard main .card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 17px;
+  border-color: #e5e5e5;
+}
+
+.dashboard main .card table th,
+.dashboard main .card table td {
+  text-align: center;
+  padding: 5px;
+  border-color: #e5e5e5;
+}
+
+.dashboard main .card button {
+  background: #85c88a;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #fff;
+  padding: 1px 5px;
+  border: none;
+}
+
+.dashboard main .card button.rounded {
+  border-radius: 50%;
+}
+
+.dashboard main .card .radio-group {
+  position: relative;
+}
+
+.dashboard main .card .radio-group .dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #eaeaea;
+  border-radius: 50%;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard main .card .radio-group .dot.active {
+  background: #0a1931;
+}
+
+.dashboard main .card .radio-group input {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.dashboard main .card.ikm {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.dashboard main .card.ikm table tr td.left,
+.dashboard main .card.ikm table tr th.left {
+  text-align: left;
+}
+
+.dashboard main .card.data-ikm {
+  z-index: -77;
+  opacity: 0;
+}
+
+.dashboard main .card.ikm.kesimpulan {
+  z-index: -77;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.dashboard main .card.ikm.kesimpulan table {
+  width: 50%;
+  border: none;
+}
+
+.dashboard main .card.ikm.kesimpulan table tr td {
+  border: none;
+  border-bottom: 1px solid #e5e5e5e5;
+}
+
+.dashboard main .card.data-ikm.show,
+.dashboard main .card.ikm.kesimpulan.show {
+  z-index: 77;
+  opacity: 1;
+}
+
+.dashboard main .card.ikm.kuis table tbody td button.edit {
+  background-image: -webkit-gradient(linear, left top, right top, from(#6ce2ff), to(#39d7ff));
+  background-image: linear-gradient(to right, #6ce2ff, #39d7ff);
+}
+
+.dashboard main .card.ikm.kuis table tbody td button.delete {
+  background: #f82e27;
+}
+
+.dashboard main .akun {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.dashboard main .akun .foto {
+  width: 181px;
+  height: 181px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.dashboard main .akun .foto .profil {
+  width: 181px;
+  height: 181px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.dashboard main .akun .foto .profil img {
+  width: 100%;
+}
+
+.dashboard main .akun .foto label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dashboard main .akun input[type="file"] {
+  display: none;
+}
+
+.dashboard main .akun h5 {
+  font-size: 25px;
+}
+
+.dashboard main .akun p {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.dashboard main .akun h5,
+.dashboard main .akun p {
+  text-align: center;
+}
+
+.dashboard main .akun label {
+  font-size: 20px;
+  margin-bottom: 17px;
+  display: block;
+}
+
+.dashboard main .akun .form-group {
+  margin-bottom: 18px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard main .akun .form-group input {
+  background: #ffffff;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  font-size: 18px;
+  padding: 7px 66px;
+  width: 100%;
+}
+
+.dashboard main .akun .form-group button {
+  background: #ffffff;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+  padding: 7px 66px;
+  width: 200px;
+}
+
+.dashboard main .akun .link {
+  text-align: center;
+  margin-top: 73px;
+}
+
+.dashboard main .akun .link a {
+  background: #ff0000;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-size: 17px;
+  padding: 6px 47px;
+  color: #000;
+}
+/*# sourceMappingURL=style.css.map */

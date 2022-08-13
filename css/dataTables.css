@@ -1,0 +1,51 @@
+.card.ikm.kuis {
+  overflow: auto;
+}
+
+.dataTables_length {
+  margin-bottom: 1rem;
+}
+
+.dataTables_length select {
+  background: #0a1931;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #fff;
+  padding: 1px 5px;
+  border: none;
+}
+
+.dataTables_filter input {
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-bottom: 7px;
+  margin-left: 0.5rem;
+}
+
+.dataTables_filter input:focus {
+  outline: none;
+}
+
+.dataTables_info,
+.dataTables_length {
+  float: left;
+}
+
+.dataTables_paginate,
+.dataTables_filter {
+  float: right;
+}
+
+.dataTables_paginate a {
+  /* border: 1px solid #5d8bf4; */
+  background: #0a1931;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #fff;
+  padding: 1px 5px;
+  border: none;
+  margin-left: 4px;
+}
